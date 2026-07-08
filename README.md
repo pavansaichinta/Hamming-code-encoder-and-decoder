@@ -42,3 +42,22 @@ By evaluating the recalculated 3-bit internal syndrome alongside the overall 8-b
 │   └── hamming_top_8_4.v      # Top-level wrapper with integrated error injection
 └── bench/
     └── tb_hamming_top_8_4.v   # Self-checking testbench covering verification scenarios
+
+
+
+### TCL Console Output Log
+The self-checking testbench successfully executed all targeted verification scenarios, proving the functional correctness of the SEC-DED architecture:
+
+```text
+Built simulation snapshot tb_hamming_top_8_4_behav
+INFO: [Runs 36-26] xelab completed.
+INFO: [Vivado 12-1390] *** Running xsim
+    with args "tb_hamming_top_8_4_behav -key {Behavioral:sim_1:Functional:tb_hamming_top_8_4} -tclbatch {tb_hamming_top_8_4.tcl} -log {tb_hamming_top_8_4_behav.log}"
+Vivado Simulator 2014.1
+Time resolution is 1 ps
+[PASS] Scenario 1: Clean data transmitted and recovered perfectly.
+[PASS] Scenario 2: Single-bit error detected and corrected successfully.
+[PASS] Scenario 3: Double-bit error detected reliably (Uncorrectable).
+$finish called at time : 50 ns : File "C:/Users/pavan/OneDrive/Documents/xilinx_vivado/Hamingcode_encoder_decoder/Hamingcode_encoder_decoder.srcs/sim_1/new/hamingcode_encoder_decoder_tb.v" Line 82
+INFO: [Vivado 12-1395] XSim completed. Design snapshot 'tb_hamming_top_8_4_behav' loaded.
+launch_xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 949.090 ; gain = 0.000
